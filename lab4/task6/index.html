@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 6</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    button::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    .evidence__list {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .evidence__item {
+        width: 100%;
+    }
+
+    .evidence__item_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: space-between;
+        column-gap: 20px;
+        background-color: #e5b879;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .evidence__title {
+        color: #fff;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: 700;
+        padding-left: 10px;
+    }
+
+    .evidence__item.active .evidence__item_wrapper {
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+
+    
+
+    .evidence__item.active .evidence__button span:nth-child(1) {
+        transform: rotate(45deg) translateX(3px) translateY(0px);
+    }
+
+    .evidence__item.active .evidence__button span:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .evidence__item.active .evidence__button span:nth-child(3) {
+        transform: rotate(-45deg) translateX(4px) translateY(-1px);
+    }
+
+    .evidence__item_wrapper {
+        max-height: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: #d6c8bc;
+        transition: all 0.3s ease-in-out;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .evidence__button {
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .evidence__button span {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        display: block;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    .evidence__button span:nth-child(1) {
+        transform: translateY(-8px);
+    }
+
+    .evidence__button span:nth-child(3) {
+        transform: translateY(8px);
+    }
+
+    .evidence__text {
+        color: #333;
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: 500;
+    }
+</style>
+<body>
+
+    <div class="evidence__list"></div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

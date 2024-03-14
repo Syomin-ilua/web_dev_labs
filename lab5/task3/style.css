@@ -1,0 +1,506 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+body {
+    background-color: #333;
+}
+
+.header {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.header__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todos__title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+}
+
+.todos {
+    width: 100%;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.todos__wrapper {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    border-radius: 10px
+}
+
+.todo__list {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+.todo__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.todo__item_name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.btn__todo_delete {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn__todo_delete img {
+    width: 100%;
+    height: 100%;
+}
+
+.todo__list_wrapper {
+    flex: 1 1 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.todo__item {
+    width: 100%;
+    height: 50px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.addTodos {}
+
+.form__add_todos {}
+
+.name__todos_input {}
+
+.btn__add_todos {}
+
+.add__todos_list {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add__todos_list:active {
+    transform: scale(0.90);
+    transition: all 0.3s;
+}
+
+.add__todos_list img {
+    width: 100%;
+    height: 100%;
+}
+
+.todoList__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+}
+
+.todoList__title_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 20px;
+}
+
+.btn__add_todoList {
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn__add_todoList img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn__delete_list {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn__delete_list img {
+    width: 100%;
+    height: 100%;
+}
+
+.todoList__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: modalAnimate 0.5s;
+    z-index: 500;
+}
+
+.modal {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    z-index: 501;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    animation: modalAnimate 0.5s;
+}
+
+.modal__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.form__add_todos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.add__list_title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #333;
+
+}
+
+.name__todos_input {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #a4a4a4;
+    outline: none;
+}
+
+.btn__add_todos {
+    width: 100%;
+    height: 35px;
+    background-color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add__item_title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #333;
+}
+
+.form__add_todo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.name__todo_input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a4a4a4;
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0px;
+    outline: none;
+}
+
+.description__todo_input {
+    width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    height: min-content;
+    border: 1px solid #a4a4a4;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    outline: none;
+    resize: vertical;
+}
+
+.date__label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.date__title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.button__add_todo {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #252525;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.date__input {
+    width: 160px;
+    height: 30px;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #a4a4a4;
+}
+
+.todo__more {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.todo__title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #333;
+}
+
+.todo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.todo__status p {
+    color: #333;
+    font-size: 14px;
+}
+
+.todo__status span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.description__todo {
+    font-size: 14px;
+    color: #333;
+}
+
+.date_todo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.date_todo p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.date_todo span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.todos__empty {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.todos__empty_img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todos__empty_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.todos__empty_text {
+    font-size: 21px;
+    font-weight: 600;
+    color: #333;
+}
+
+.empty__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+.empty__list img {
+    width: 50px;
+    height: 50px;
+}
+
+.empty__list p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.todo__toggle_status {
+    width: 100%;
+    height: 100%;
+}
+
+.toggle__status_label {
+    width: 15px;
+    height: 15px;
+}
+
+.todo__item_actions {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.todo__general_info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.btn__more_todo {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn__more_todo img {
+    width: 100%;
+    height: 100%;
+}
+
+.todo__waiting {
+    background-color: rgba(74, 111, 221, 0.2);
+}
+
+.todo__done {
+    background-color: rgba(57, 183, 19, 0.392);
+}
+
+.todo__expired {
+    background-color: rgba(226, 74, 74, 0.2);
+}
+
+
+
+@keyframes modalAnimate {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 1280px) {
+    .todos__wrapper {
+        max-width: 98%;
+    }
+
+    .header__container {
+        max-width: 98%;
+    }
+}

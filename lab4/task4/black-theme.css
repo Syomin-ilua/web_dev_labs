@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.body__wrapper {
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__change_theme {
+    width: 250px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn__change_theme:hover {
+    background-color: #d3d3d3;
+    transition: all 0.3s;
+}

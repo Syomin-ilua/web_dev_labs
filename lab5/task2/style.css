@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: #232323;
+    padding: 50px;
+}
+
+.start__quiz_btn {
+    width: 250px;
+    height: 40px;
+    background-color: #ff4545;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start__quiz_btn.disabled {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.start__quiz_btn:active {
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+
+.question__wrapper {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    animation: showQuestionWrapper 0.3s forwards;
+}
+
+@keyframes showQuestionWrapper {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.question__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 15px;
+}
+
+.question__title {
+    font-family: "Montserrat";
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #333;
+}
+
+.option__label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.answer__options {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+}
+
+.answer__option_input {}
+
+.answer__option_text {
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+.question__actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.btn__question_next {
+    width: 200px;
+    height: 35px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: auto;
+}
+
+.result__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 100px;
+}
+
+.result__title {
+    font-size: 21px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+
+}
+
+.result__text_wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.btn__start_quiz {
+    width: 250px;
+    height: 40px;
+    background-color: #ff4545;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.result__text {
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
+
+.quiz__results_wrapper {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.quiz__result_title {
+    font-size: 21px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: #333;
+}
+
+.quiz__results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.quiz__result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.quiz__date {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #333;
+}
+
+.quiz__date span {
+    font-weight: 600;
+}
+
+.quiz__result_procent {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #333;
+}
+
+.quiz__result_procent span {
+    font-weight: 600;
+}
+
+.quiz__empty_results {
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+.start__quiz_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

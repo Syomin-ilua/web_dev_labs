@@ -1,0 +1,319 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.form__notes_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form__notes {
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: space-between;
+}
+.notes__title {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    color: #333;
+}
+.notes__input_label {
+    width: 100%;
+}
+.note__input {
+    width: 100%;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #bfbfbf;
+    outline: none;
+    transition: all 0.3s;
+}
+.note__input:hover {
+    border: 1px solid #7d7d7d;
+    transition: all 0.3s;
+}
+.note__input:focus {
+    border: 1px solid #505050;
+    transition: all 0.3s;
+}
+
+.notes__textarea_label {
+    width: 100%;
+}
+
+.note__textArea {
+    width: 100%;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #bfbfbf;
+    outline: none;
+    transition: all 0.3s;
+    resize: vertical;
+}
+
+.note__textArea:hover {
+    border: 1px solid #7d7d7d;
+    transition: all 0.3s;
+}
+.note__textArea:focus {
+    border: 1px solid #505050;
+    transition: all 0.3s;
+}
+.btn__add_note {
+    width: 100%;
+    height: 35px;
+    background-color: #f8ca4e;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn__add_note:active {
+    transform: scale(0.96);
+    transition: all 0.3s;
+}
+.note__input_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.notes__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.notes__section_container {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.notes__wrapper {
+    width: 100%;
+}
+.notes__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.note__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.note__name {
+    font-weight: 700;
+    font-size: 16px;
+}
+.note__description {
+    font-weight: 400;
+    font-size: 16px;
+}
+.note__date {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+.notes__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.note__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.edit__note_btn {
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.delete__note_btn {
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.empty__notes_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+.empty__note_emoji {
+    font-size: 40px;
+}
+.empty__notes_text {
+    font-weight: 700;
+    color: #333;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: animationEditNoteModal 0.3s;
+    z-index: 500;
+}
+
+.edit__note_modal {
+    max-width: 400px;
+    width: 100%;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: animationEditNoteModal 0.3s ease-in-out;
+    z-index: 501;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.edit__note_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit__note_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.edit__note_label {
+    width: 100%;
+}
+.edit__note_input {
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #bfbfbf;
+    outline: none;
+    color: #333;
+    transition: all 0.3s;
+}
+.edit__note_textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #bfbfbf;
+    outline: none;
+    color: #333;
+}
+
+.edit__note_input:hover {
+    border: 1px solid #7d7d7d;
+    transition: all 0.3s;
+}
+
+.edit__note_input:focus {
+    border: 1px solid #505050;
+    transition: all 0.3s;
+}
+
+.note__edit_actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.button__edit_cancel {
+    width: 50%;
+    height: 30px;
+    background-color: rgb(255, 42, 42);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button__edit_note {
+    width: 50%;
+    height: 30px;
+    background-color: green;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.note__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 300px;
+    width: 100%;
+    line-height: 20px;
+}
+
+.note__text span {
+    font-weight: 700;
+}
+
+
+@keyframes animationEditNoteModal {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Блокнот</title>
+</head>
+<body>
+    
+    <section class="form__notes_section">
+        <form class="form__notes">
+            <h1 class="notes__title">📝 Добавьте заметку</h1>
+            <div class="note__input_wrapper">
+                <label class="notes__input_label">
+                    <input placeholder="Введите название заметки" name="note" class="note__input" type="text">
+                </label>
+                <label class="notes__textarea_label">
+                    <textarea placeholder="Введите описание заметки" name="noteDescription" class="note__textArea" type="text"></textarea>
+                </label>
+                <button type="submit" class="btn__add_note">Добавить заметку</button>
+            </div>
+        </form>
+    </section>
+
+
+    <section class="notes__section">
+        <div class="notes__section_container">
+            <h2 class="notes__title">📋 Ваши заметки</h2>
+            <div class="notes__wrapper"></div>
+        </div>
+    </section>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

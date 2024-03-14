@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+    <style>
+        .pictures__list {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(150px, 200px));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .picture__item {
+            width: 100%;
+            height: 150px;
+            cursor: pointer;
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+        .modal {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #fff;
+            padding: 20px;
+            width: 500px;
+            height: 500px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 5;
+            transition: all 0.3s;
+            transform: translateX(-50%) translateY(-100%);
+            left: 50%;
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+            border-radius: 10px;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s;
+            transform: translateX(-50%) translateY(25%);
+            left: 50%;
+        } 
+        .modal__wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        .pictures__production {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .backdrop {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 4;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .backdrop.active {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s;
+        }
+    </style>
+<body>
+    
+    <!-- <div class="pictures__list">
+        <div data-image="1" class="picture__item">
+            <img class="image" src="./images/1.jpeg" alt="1">
+        </div>
+        <div data-image="2" class="picture__item">
+            <img class="image" src="./images/2.jpg" alt="2">
+        </div>
+        <div data-image="3" class="picture__item">
+            <img class="image" src="./images/3.jpg" alt="3">
+        </div>
+    </div> -->
+
+    <!-- <div class="modal">
+        <div class="modal__wrapper">
+            <img class="pictures__production" src="./images/1.jpeg" alt="1">
+        </div>
+    </div>
+
+    <div class="backdrop"><div> -->
+
+    <script src="./script.js"></script>
+</body>
+</html>
